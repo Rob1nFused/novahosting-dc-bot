@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
     if (!cmdChannel) {
         message.delete();
         message.reply(`U kunt dit command alleen uitvoeren in ${cmdChannel}`).then(message => {message.delete({timeout: 10000})});
+        return;
 
     }
 
