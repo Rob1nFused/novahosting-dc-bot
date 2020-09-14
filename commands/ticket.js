@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
     var userName = message.author.username;
     var ticketID = message.author.discriminator;
-    var cmdChannel = message.author.guild.channels.cache.get('750444909667942540');
+    var cmdChannel = bot.channels.cache.get('750444909667942540');
     ticketExist = false;
 
     if (!cmdChannel) {
