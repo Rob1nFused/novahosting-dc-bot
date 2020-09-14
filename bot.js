@@ -34,6 +34,24 @@ bot.on("ready", async () => {
 	bot.user.setActivity("NovaHosting.nl", { type: "WATCHING" });
 });
 
+bot.on("guildMemberAdd", async member => {
+	const welcomeChannel = member.guild.channels.cache.get('755096086867214380');
+	const informatieChannel = member.guild.channels.cache.get('750127937931706478').name;
+	const welcomeRole = member.guild.roles.cache.get('755098836615299222');
+	if(!welcomeChannel) return;
+
+	var welcomeEmbed = new Discord.MessageEmbed()
+    	.setTitle(`Welkom ${member}`)
+    	.setColor("RANDOM")
+		.setDescription(`Welkom in de NovaHosting Discord server. Lees even goed ${informatieChannel} door voor onze regels en algemene informatie!`)
+		.setTimestamp();
+
+		channel.send(welcomeEmbed)
+		member.guild.roles.set(welcomeRole);
+
+
+});
+
 bot.on("message", async message => {
 
 	if (message.author.bot) return;

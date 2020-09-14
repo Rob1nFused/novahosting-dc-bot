@@ -14,7 +14,8 @@ module.exports.run = async (bot, message, args) => {
         var embedTicketCreated = new Discord.MessageEmbed()
         .setTitle(`${deletedChannel} | Ticket <:ticket:754922284749422683>`)
         .setColor("RANDOM")
-        .setDescription("Ticket status: Gesloten");
+        .setDescription("Ticket status: Gesloten")
+        .setTimestamp();
 
         logChannel.send(embedTicketCreated);
     } else {

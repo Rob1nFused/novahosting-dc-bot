@@ -7,7 +7,14 @@ module.exports.run = async (bot, message, args) => {
 
     var userName = message.author.username;
     var ticketID = message.author.discriminator;
+    var cmdChannel = message.channel.id === '750444909667942540';
     ticketExist = false;
+
+    if (!cmdChannel) {
+        message.delete();
+        message.reply(`U kunt dit command alleen uitvoeren in ${cmdChannel}`).then(message => {message.delete({timeout: 10000})});
+
+    }
 
     message.guild.channels.cache.forEach(channel => {
 
@@ -46,7 +53,8 @@ module.exports.run = async (bot, message, args) => {
                     var embedTicket = new Discord.MessageEmbed()
                     .setTitle(`${message.author.username} | Ticket <:ticket:754922284749422683>`)
                     .setColor("RANDOM")
-                    .setDescription("Dank u om ons te bereiken voor support, Stel hier uw vraag!");
+                    .setDescription("Dank u om ons te bereiken voor support, Stel hier uw vraag!")
+                    .setTimestamp();
 
                     settedParent.send(embedTicket);
 
