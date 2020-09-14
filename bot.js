@@ -47,7 +47,7 @@ bot.on("guildMemberAdd", async member => {
 		.setTimestamp();
 
 		channel.send(welcomeEmbed)
-		member.guild.roles.set(welcomeRole);
+		member.guild.addrole(welcomeRole);
 
 
 });

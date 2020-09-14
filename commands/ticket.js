@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     var cmdChannel = bot.channels.cache.get('750444909667942540');
     ticketExist = false;
 
-    if (!cmdChannel) {
+    if (!message.channel.id === '750444909667942540') {
         message.delete();
         message.reply(`U kunt dit command alleen uitvoeren in ${cmdChannel}`).then(message => {message.delete({timeout: 10000})});
         return false;
