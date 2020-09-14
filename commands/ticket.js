@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
 
                     var logChannel = message.member.guild.channels.cache.find(channel => channel.name === "logs");
                     var embedTicketCreated = new Discord.MessageEmbed()
-                    .setTitle(`${settedParent} | Ticket <:ticket:754922284749422683>`)
+                    .setTitle(`${settedParent.name} | Ticket <:ticket:754922284749422683>`)
                     .setColor("RANDOM")
                     .setDescription("Ticket status: aangemaakt");
 
