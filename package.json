@@ -1,0 +1,26 @@
+{
+  "name": "NovaHosting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "discord.js": "^12.3.1",
+    "fs": "0.0.1-security",
+    "is-reachable": "^4.0.0",
+    "log-symbols": "^4.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "tcp-ping": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
