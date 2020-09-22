@@ -11,6 +11,7 @@ module.exports = bot => {
 
         const WelcomeChannel = member.guild.channels.cache.get(welcomeChannelID);
         const informatieChannel = member.guild.channels.cache.get(informatieChannelID).toString();
+        const bezoekerRole = member.guild.roles.get(bezoekerRoleID)
 
         var welcomeEmbed = new Discord.MessageEmbed()
     	.setTitle(`Welkom <@${member.id}>`)
@@ -19,7 +20,7 @@ module.exports = bot => {
         .setTimestamp();
         
         channel.send(welcomeEmbed);
-        member.roles.set(bezoekerRoleID);
+        member.addRole(bezoekerRole);
 
     }); 
 
