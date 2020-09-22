@@ -43,7 +43,7 @@ bot.on('guildMemberAdd', (member) => {
 
 	const WelcomeChannel = member.guild.channels.cache.get(welcomeChannelID);
 	const informatieChannel = member.guild.channels.cache.get(informatieChannelID).toString();
-	const bezoekerRole = member.guild.roles.get(bezoekerRoleID)
+	const bezoekerRole = member.guild.roles.cache.get(bezoekerRoleID)
 
 	var welcomeEmbed = new Discord.MessageEmbed()
 	.setTitle(`Welkom <@${member.id}>`)
