@@ -46,7 +46,7 @@ bot.on('guildMemberAdd', (member) => {
 	const bezoekerRole = member.guild.roles.cache.get(bezoekerRoleID)
 
 	var welcomeEmbed = new Discord.MessageEmbed()
-	.setTitle(`Welkom <@${member.id}>`)
+	.setTitle(`Welkom ${member.toString()}`)
 	.setColor("RANDOM")
 	.setDescription(`Welkom in de NovaHosting Discord server. Lees even goed ${informatieChannel} door voor onze regels en algemene informatie!`)
 	.setTimestamp();
