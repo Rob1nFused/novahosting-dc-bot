@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
                     var embedTicket = new Discord.MessageEmbed()
                     .setTitle(`${message.author.username} | Ticket <:ticket:754922284749422683>`)
                     .setColor("RANDOM")
-                    .setDescription("Dank u om ons te bereiken voor support, Stel hier uw vraag!")
+                    .setDescription("Dank u om ons te bereiken voor support, stel hier uw vraag!")
                     .setTimestamp();
 
                     settedParent.send(embedTicket);
