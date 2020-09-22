@@ -51,7 +51,7 @@ bot.on('guildMemberAdd', (member) => {
 	.setDescription(`Welkom in de NovaHosting Discord server. Lees even goed ${informatieChannel} door voor onze regels en algemene informatie!`)
 	.setTimestamp();
 	
-	channel.send(welcomeEmbed);
+	WelcomeChannel.send(welcomeEmbed);
 	member.addRole(bezoekerRole);
 
 }); 
