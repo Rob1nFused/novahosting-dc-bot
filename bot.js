@@ -52,7 +52,7 @@ bot.on('guildMemberAdd', (member) => {
 	.setTimestamp();
 	
 	WelcomeChannel.send(welcomeEmbed);
-	member.addRole(bezoekerRole);
+	member.roles.add(bezoekerRole);
 
 }); 
 
