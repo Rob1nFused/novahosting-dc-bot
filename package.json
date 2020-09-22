@@ -16,6 +16,7 @@
     "fs": "0.0.1-security",
     "is-reachable": "^4.0.0",
     "log-symbols": "^4.0.0",
+    "moment": "^2.29.0",
     "path": "^0.12.7",
     "request": "^2.88.2",
     "tcp-ping": "^0.1.1"
