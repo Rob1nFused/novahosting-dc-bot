@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
         {name: 'Kanalen', value: `${serverKanalen.size}`, inline: true},
         {name: 'Rollen', value: `${serverRollen.length}`, inline: true}
     )
-    .addField({name: 'Creatie datum', value: `${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`})
+    .addField({name: 'Creatie datum', value: `${message.guild.createdTimestamp}`})
 
     message.channel.send(serverinfoEmbed);
 	
