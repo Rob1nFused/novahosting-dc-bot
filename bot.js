@@ -48,7 +48,7 @@ bot.on('guildMemberAdd', (member) => {
 	var welcomeEmbed = new Discord.MessageEmbed()
 	.setTitle(`Welkom ${member.user.username}`)
 	.setColor("RANDOM")
-	.setThumbnail(member.user.displayAvatarURL)
+	.setThumbnail(member.user.displayAvatarURL())
 	.setDescription(`Welkom in de NovaHosting Discord server. Lees even goed ${informatieChannel} door voor onze regels en algemene informatie!`)
 	.setTimestamp();
 	
